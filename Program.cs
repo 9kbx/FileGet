@@ -97,24 +97,7 @@ namespace FileGet
                 else
                 {
                     if (!_SaveDir.EndsWith(@"\"))
-                        _SaveDir += @"\";
-
-                    #region 自定义文件夹名称
-                    //if (_SaveDir.Contains("{") && _SaveDir.Contains("}"))
-                    //{
-                    //    var left = _SaveDir.Substring(0, _SaveDir.IndexOf("{"));
-                    //    var right = _SaveDir.Replace(left, "").Replace("{", "").Replace("}", "").Replace("\\", "");
-                    //    try
-                    //    {
-                    //        _SaveDir = $@"{left}{DateTime.Now.ToString(right)}\";
-                    //    }
-                    //    catch (Exception ex)
-                    //    {
-                    //        logger.Error(ex);
-                    //        _SaveDir = $@"{left}{DateTime.Now.ToString("yyyy-MM-dd HHmmss")}\";
-                    //    }
-                    //} 
-                    #endregion 自定义文件夹名称
+                        _SaveDir += @"\"; 
 
                     _SaveDir = _SaveDir + DateTime.Now.ToString("yyyy-MM-dd HHmmss") + @"\";
 
